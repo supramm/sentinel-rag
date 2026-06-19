@@ -1,0 +1,124 @@
+{
+  "conveyor_system": {
+    "vibration_high + motor_current_high": {
+      "likely_failure": [
+        "roller_bearing_wear",
+        "belt_misalignment",
+        "motor_overload"
+      ],
+      "checks": [
+        "Inspect roller bearings for heat, play, or abnormal noise",
+        "Check belt tracking and alignment",
+        "Verify belt tension",
+        "Inspect motor and gearbox mounting"
+      ],
+      "severity": "high"
+    },
+    "belt_speed_drop + motor_current_high": {
+      "likely_failure": [
+        "belt_slippage",
+        "mechanical_obstruction",
+        "drive_pulley_issue"
+      ],
+      "checks": [
+        "Check belt tension",
+        "Inspect drive pulley condition",
+        "Look for jammed rollers or material buildup",
+        "Check motor overload condition"
+      ],
+      "severity": "high"
+    }
+  },
+  "hydraulic_press": {
+    "pressure_drop + oil_temperature_high": {
+      "likely_failure": [
+        "seal_leak",
+        "pump_degradation",
+        "fluid_contamination"
+      ],
+      "checks": [
+        "Inspect seals and hoses for leakage",
+        "Check hydraulic fluid level and contamination",
+        "Inspect pump operation",
+        "Check filters and valves"
+      ],
+      "severity": "high"
+    },
+    "pressure_fluctuation + vibration_high": {
+      "likely_failure": [
+        "pump_cavitation",
+        "air_in_hydraulic_system",
+        "suction_restriction"
+      ],
+      "checks": [
+        "Check hydraulic fluid level",
+        "Bleed air from hydraulic system",
+        "Inspect inlet restrictions",
+        "Check pump mounting and suction line"
+      ],
+      "severity": "medium-high"
+    }
+  },
+  "cnc_machine": {
+    "spindle_vibration_high + tool_wear_high": {
+      "likely_failure": [
+        "tool_wear",
+        "spindle_bearing_issue",
+        "cutting_instability"
+      ],
+      "checks": [
+        "Inspect tool wear and replace if needed",
+        "Check spindle bearing noise or heat",
+        "Verify cutting parameters",
+        "Inspect workholding rigidity"
+      ],
+      "severity": "high"
+    },
+    "spindle_temp_high + motor_current_high": {
+      "likely_failure": [
+        "spindle_overload",
+        "bearing_friction",
+        "lubrication_issue",
+        "cooling_issue"
+      ],
+      "checks": [
+        "Check spindle load",
+        "Inspect cooling system",
+        "Check lubrication",
+        "Inspect spindle drive alarms"
+      ],
+      "severity": "high"
+    }
+  },
+  "robotic_welding_arm": {
+    "joint_torque_high + temperature_high": {
+      "likely_failure": [
+        "servo_motor_degradation",
+        "joint_friction",
+        "axis_overload"
+      ],
+      "checks": [
+        "Inspect joint axis for friction or obstruction",
+        "Check servo motor temperature",
+        "Inspect cable routing and drag",
+        "Review controller alarms"
+      ],
+      "severity": "high"
+    },
+    "weld_quality_drop + cycle_time_increase": {
+      "likely_failure": [
+        "torch_wear",
+        "nozzle_blockage",
+        "wire_feed_issue",
+        "spatter_buildup"
+      ],
+      "checks": [
+        "Inspect torch tip and nozzle",
+        "Clean spatter buildup",
+        "Check wire feeder operation",
+        "Verify shielding gas flow"
+      ],
+      "severity": "medium-high"
+    }
+  }
+}

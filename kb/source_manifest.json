@@ -1,0 +1,203 @@
+{
+  "Arm1.pdf": {
+    "machine_type": "robotic_welding_arm",
+    "source_type": "manual",
+    "priority": 1,
+    "signals": [
+      "joint_torque",
+      "temperature",
+      "position_accuracy",
+      "cycle_time",
+      "weld_quality"
+    ],
+    "failure_modes": [
+      "servo_motor_degradation",
+      "joint_friction",
+      "cable_fatigue",
+      "nozzle_blockage",
+      "spatter_buildup",
+      "wire_feed_issue"
+    ]
+  },
+  "Arm2.pdf": {
+    "machine_type": "robotic_welding_arm",
+    "source_type": "manual",
+    "priority": 2,
+    "signals": [
+      "joint_torque",
+      "temperature",
+      "position_accuracy",
+      "cycle_time",
+      "weld_quality"
+    ],
+    "failure_modes": [
+      "servo_issue",
+      "position_error",
+      "torch_wear",
+      "wire_feed_issue",
+      "cooling_issue"
+    ]
+  },
+  "Belt1.pdf": {
+    "machine_type": "conveyor_system",
+    "source_type": "manual",
+    "priority": 1,
+    "signals": [
+      "belt_speed",
+      "belt_tension",
+      "motor_current",
+      "vibration"
+    ],
+    "failure_modes": [
+      "belt_slippage",
+      "belt_misalignment",
+      "roller_bearing_wear",
+      "motor_overload"
+    ]
+  },
+  "Belt2.pdf": {
+    "machine_type": "conveyor_system",
+    "source_type": "manual",
+    "priority": 2,
+    "signals": [
+      "belt_speed",
+      "belt_tension",
+      "motor_current",
+      "vibration"
+    ],
+    "failure_modes": [
+      "belt_tracking_issue",
+      "drive_module_issue",
+      "idler_wear",
+      "lubrication_issue"
+    ]
+  },
+  "Belt3.pdf": {
+    "machine_type": "conveyor_system",
+    "source_type": "manual",
+    "priority": 2,
+    "signals": [
+      "belt_speed",
+      "belt_tension",
+      "motor_current",
+      "vibration"
+    ],
+    "failure_modes": [
+      "belt_tension_issue",
+      "pulley_issue",
+      "material_buildup",
+      "bearing_wear"
+    ]
+  },
+  "CNC1.pdf": {
+    "machine_type": "cnc_machine",
+    "source_type": "manual",
+    "priority": 1,
+    "signals": [
+      "spindle_speed",
+      "feed_rate",
+      "tool_wear",
+      "vibration",
+      "motor_current",
+      "temperature"
+    ],
+    "failure_modes": [
+      "spindle_drive_issue",
+      "axis_servo_issue",
+      "tool_wear",
+      "lubrication_issue"
+    ]
+  },
+  "CNC2.pdf": {
+    "machine_type": "cnc_machine",
+    "source_type": "manual",
+    "priority": 1,
+    "signals": [
+      "spindle_speed",
+      "feed_rate",
+      "tool_wear",
+      "vibration",
+      "motor_current",
+      "temperature"
+    ],
+    "failure_modes": [
+      "spindle_drive_alarm",
+      "overload",
+      "overheating",
+      "bearing_friction"
+    ]
+  },
+  "CNC3.pdf": {
+    "machine_type": "cnc_machine",
+    "source_type": "manual",
+    "priority": 2,
+    "signals": [
+      "spindle_speed",
+      "feed_rate",
+      "tool_wear",
+      "vibration",
+      "motor_current",
+      "temperature"
+    ],
+    "failure_modes": [
+      "vector_drive_fault",
+      "spindle_alarm",
+      "servo_alarm",
+      "tool_changer_issue"
+    ]
+  },
+  "Press1.pdf": {
+    "machine_type": "hydraulic_press",
+    "source_type": "manual",
+    "priority": 1,
+    "signals": [
+      "pressure",
+      "flow_rate",
+      "oil_temperature",
+      "seal_integrity",
+      "vibration"
+    ],
+    "failure_modes": [
+      "pressure_loss",
+      "seal_leak",
+      "pump_degradation",
+      "hydraulic_fluid_issue"
+    ]
+  },
+  "Press2.pdf": {
+    "machine_type": "hydraulic_press",
+    "source_type": "manual",
+    "priority": 2,
+    "signals": [
+      "pressure",
+      "flow_rate",
+      "oil_temperature",
+      "seal_integrity",
+      "vibration"
+    ],
+    "failure_modes": [
+      "pressure_instability",
+      "ram_motion_issue",
+      "hydraulic_leak",
+      "valve_issue"
+    ]
+  },
+  "Press3.pdf": {
+    "machine_type": "hydraulic_press",
+    "source_type": "manual",
+    "priority": 2,
+    "signals": [
+      "pressure",
+      "flow_rate",
+      "oil_temperature",
+      "seal_integrity",
+      "vibration"
+    ],
+    "failure_modes": [
+      "air_in_hydraulic_system",
+      "pressure_loss",
+      "cylinder_leak",
+      "filter_clogging"
+    ]
+  }
+}

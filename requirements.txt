@@ -1,0 +1,8 @@
+streamlit
+python-dotenv
+groq
+huggingface_hub
+sentence-transformers
+faiss-cpu
+numpy
+requests

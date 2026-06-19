@@ -1,0 +1,2642 @@
+[
+  {
+    "scenario_id": "SCN_001",
+    "machine_type": "conveyor_belt",
+    "timestamp": "2026-05-07T17:19:22.028070",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 13.19,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.0007007112144492567,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": false,
+    "lstm_ae_confidence": -0.7286305293008453,
+    "lstm_ae_top3_features": [
+      "humidity_pct",
+      "ambient_temp_c",
+      "cooling_stress"
+    ],
+    "if_score": 0.21629559669917847,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "oil_viscosity_cst",
+      "temperature_c",
+      "coolant_temp_c"
+    ],
+    "rul_cycles": 109.34,
+    "rul_days": 7.29,
+    "rul_bracket": "healthy",
+    "anomaly_type_predicted": "normal",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "clean",
+    "ensemble_anomaly_score": 0.0566,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "healthy",
+    "health_score": 0.9992992887855507,
+    "color_code": "green",
+    "severity": "none",
+    "maintenance_urgency": "NORMAL OPERATION",
+    "maintenance_message": "All systems nominal. RUL ≈ 7.3d.",
+    "sensor_snapshot": {
+      "temperature_c": 131.042,
+      "vibration_mm_s": 0.245,
+      "pressure_kpa": 147.881,
+      "motor_rpm": 3014.213,
+      "flow_rate_lpm": 45.045,
+      "power_consumption_kw": 49.885,
+      "coolant_temp_c": 124.547,
+      "acoustic_level_db": 76.094,
+      "oil_viscosity_cst": 47.909,
+      "humidity_pct": 34.675,
+      "ambient_temp_c": 23.669,
+      "operating_mode": "normal"
+    },
+    "label": "Conveyor Belt — Normal Operation",
+    "description": "All sensors within expected range.",
+    "ground_truth": {
+      "is_anomaly": false,
+      "anomaly_type": "normal",
+      "rul_cycles": 109.34,
+      "rul_days": 7.3,
+      "health_status": "healthy"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": false,
+      "pred_is_anomaly": false,
+      "anomaly_correct": true,
+      "gt_rul_cycles": 109.34,
+      "pred_rul_cycles": 109.34,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "normal",
+      "pred_anomaly_type": "normal",
+      "type_correct": true
+    },
+    "diagnosis": "normal",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 7.29,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": false,
+        "confidence": -0.7286305293008453,
+        "reconstruction_error": 0.0007007112144492567,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "humidity_pct",
+          "ambient_temp_c",
+          "cooling_stress"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.21629559669917847,
+        "top_features": [
+          "oil_viscosity_cst",
+          "temperature_c",
+          "coolant_temp_c"
+        ]
+      },
+      "rul": {
+        "cycles": 109.34,
+        "days": 7.29,
+        "bracket": "healthy"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_002",
+    "machine_type": "conveyor_belt",
+    "timestamp": "2026-05-07T17:19:22.041889",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 12.81,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.013775221072137356,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": true,
+    "lstm_ae_confidence": 4.334756658884014,
+    "lstm_ae_top3_features": [
+      "vibration_mm_s",
+      "acoustic_level_db",
+      "humidity_pct"
+    ],
+    "if_score": 0.2224483692693311,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "temperature_c",
+      "oil_viscosity_cst",
+      "coolant_temp_c"
+    ],
+    "rul_cycles": 85.95,
+    "rul_days": 5.73,
+    "rul_bracket": "monitor",
+    "anomaly_type_predicted": "bearing_degradation",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "partial_ae",
+    "ensemble_anomaly_score": 0.639,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "caution",
+    "health_score": 0.9862247789278626,
+    "color_code": "yellow",
+    "severity": "low",
+    "maintenance_urgency": "MINOR DEVIATION",
+    "maintenance_message": "Sensor deviation noted. Monitor next 24h.",
+    "sensor_snapshot": {
+      "temperature_c": 98.002,
+      "vibration_mm_s": 0.205,
+      "pressure_kpa": 149.564,
+      "motor_rpm": 2994.148,
+      "flow_rate_lpm": 45.455,
+      "power_consumption_kw": 49.398,
+      "coolant_temp_c": 92.577,
+      "acoustic_level_db": 71.307,
+      "oil_viscosity_cst": 60.991,
+      "humidity_pct": 33.199,
+      "ambient_temp_c": 20.544,
+      "operating_mode": "normal"
+    },
+    "label": "Conveyor Belt — Bearing Wear",
+    "description": "Early vibration degradation detected.",
+    "ground_truth": {
+      "is_anomaly": true,
+      "anomaly_type": "bearing_degradation",
+      "rul_cycles": 85.95,
+      "rul_days": 5.7,
+      "health_status": "warning"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": true,
+      "pred_is_anomaly": true,
+      "anomaly_correct": true,
+      "gt_rul_cycles": 85.95,
+      "pred_rul_cycles": 85.95,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "bearing_degradation",
+      "pred_anomaly_type": "bearing_degradation",
+      "type_correct": true
+    },
+    "diagnosis": "bearing_degradation",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 5.73,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": true,
+        "confidence": 4.334756658884014,
+        "reconstruction_error": 0.013775221072137356,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "vibration_mm_s",
+          "acoustic_level_db",
+          "humidity_pct"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.2224483692693311,
+        "top_features": [
+          "temperature_c",
+          "oil_viscosity_cst",
+          "coolant_temp_c"
+        ]
+      },
+      "rul": {
+        "cycles": 85.95,
+        "days": 5.73,
+        "bracket": "monitor"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_003",
+    "machine_type": "conveyor_belt",
+    "timestamp": "2026-05-07T17:19:22.054282",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 12.39,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.006178765557706356,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": true,
+    "lstm_ae_confidence": 1.3928646915328557,
+    "lstm_ae_top3_features": [
+      "vibration_mm_s",
+      "acoustic_level_db",
+      "humidity_pct"
+    ],
+    "if_score": 0.213113117570853,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "temperature_c",
+      "oil_viscosity_cst",
+      "coolant_temp_c"
+    ],
+    "rul_cycles": 42.05,
+    "rul_days": 2.8,
+    "rul_bracket": "critical",
+    "anomaly_type_predicted": "bearing_degradation",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "partial_ae",
+    "ensemble_anomaly_score": 0.6419,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "warning",
+    "health_score": 0.9938212344422936,
+    "color_code": "orange",
+    "severity": "high",
+    "maintenance_urgency": "MINOR DEVIATION",
+    "maintenance_message": "Sensor deviation noted. Monitor next 24h.",
+    "sensor_snapshot": {
+      "temperature_c": 133.533,
+      "vibration_mm_s": 0.294,
+      "pressure_kpa": 148.776,
+      "motor_rpm": 2902.302,
+      "flow_rate_lpm": 44.649,
+      "power_consumption_kw": 47.308,
+      "coolant_temp_c": 124.959,
+      "acoustic_level_db": 77.567,
+      "oil_viscosity_cst": 48.374,
+      "humidity_pct": 50.703,
+      "ambient_temp_c": 23.999,
+      "operating_mode": "normal"
+    },
+    "label": "Conveyor Belt — Bearing Failure",
+    "description": "Severe bearing degradation detected.",
+    "ground_truth": {
+      "is_anomaly": true,
+      "anomaly_type": "bearing_degradation",
+      "rul_cycles": 42.05,
+      "rul_days": 2.8,
+      "health_status": "degraded"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": true,
+      "pred_is_anomaly": true,
+      "anomaly_correct": true,
+      "gt_rul_cycles": 42.05,
+      "pred_rul_cycles": 42.05,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "bearing_degradation",
+      "pred_anomaly_type": "bearing_degradation",
+      "type_correct": true
+    },
+    "diagnosis": "bearing_degradation",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 2.8,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": true,
+        "confidence": 1.3928646915328557,
+        "reconstruction_error": 0.006178765557706356,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "vibration_mm_s",
+          "acoustic_level_db",
+          "humidity_pct"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.213113117570853,
+        "top_features": [
+          "temperature_c",
+          "oil_viscosity_cst",
+          "coolant_temp_c"
+        ]
+      },
+      "rul": {
+        "cycles": 42.05,
+        "days": 2.8,
+        "bracket": "critical"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_004",
+    "machine_type": "conveyor_belt",
+    "timestamp": "2026-05-07T17:19:22.066813",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 11.53,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.0009746538125909865,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": false,
+    "lstm_ae_confidence": -0.6225403234861105,
+    "lstm_ae_top3_features": [
+      "temperature_c",
+      "humidity_pct",
+      "ambient_temp_c"
+    ],
+    "if_score": 0.17582642367234985,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "vibration_mm_s",
+      "coolant_temp_c",
+      "oil_viscosity_cst"
+    ],
+    "rul_cycles": 47.3,
+    "rul_days": 3.15,
+    "rul_bracket": "critical",
+    "anomaly_type_predicted": "thermal_runaway",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "clean",
+    "ensemble_anomaly_score": 0.0844,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "degraded",
+    "health_score": 0.999025346187409,
+    "color_code": "orange",
+    "severity": "high",
+    "maintenance_urgency": "NORMAL OPERATION",
+    "maintenance_message": "All systems nominal. RUL ≈ 7.3d.",
+    "sensor_snapshot": {
+      "temperature_c": 100.377,
+      "vibration_mm_s": 0.149,
+      "pressure_kpa": 155.954,
+      "motor_rpm": 3198.854,
+      "flow_rate_lpm": 46.988,
+      "power_consumption_kw": 53.481,
+      "coolant_temp_c": 86.166,
+      "acoustic_level_db": 67.829,
+      "oil_viscosity_cst": 61.683,
+      "humidity_pct": 45.96,
+      "ambient_temp_c": 19.241,
+      "operating_mode": "normal"
+    },
+    "label": "Conveyor Belt — Thermal Escalation",
+    "description": "Temperature rising beyond safe range.",
+    "ground_truth": {
+      "is_anomaly": true,
+      "anomaly_type": "thermal_runaway",
+      "rul_cycles": 47.3,
+      "rul_days": 3.2,
+      "health_status": "degraded"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": true,
+      "pred_is_anomaly": false,
+      "anomaly_correct": false,
+      "gt_rul_cycles": 47.3,
+      "pred_rul_cycles": 47.3,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "thermal_runaway",
+      "pred_anomaly_type": "thermal_runaway",
+      "type_correct": true
+    },
+    "diagnosis": "thermal_runaway",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 3.15,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": false,
+        "confidence": -0.6225403234861105,
+        "reconstruction_error": 0.0009746538125909865,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "temperature_c",
+          "humidity_pct",
+          "ambient_temp_c"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.17582642367234985,
+        "top_features": [
+          "vibration_mm_s",
+          "coolant_temp_c",
+          "oil_viscosity_cst"
+        ]
+      },
+      "rul": {
+        "cycles": 47.3,
+        "days": 3.15,
+        "bracket": "critical"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_005",
+    "machine_type": "conveyor_belt",
+    "timestamp": "2026-05-07T17:19:22.079951",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 12.14,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.0008452888578176498,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": false,
+    "lstm_ae_confidence": -0.6726397047806421,
+    "lstm_ae_top3_features": [
+      "humidity_pct",
+      "ambient_temp_c",
+      "pressure_kpa"
+    ],
+    "if_score": 0.215476688199911,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "pressure_kpa",
+      "temperature_c",
+      "oil_viscosity_cst"
+    ],
+    "rul_cycles": 88.83,
+    "rul_days": 5.92,
+    "rul_bracket": "monitor",
+    "anomaly_type_predicted": "pressure_leak",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "clean",
+    "ensemble_anomaly_score": 0.0616,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "healthy",
+    "health_score": 0.9991547111421824,
+    "color_code": "green",
+    "severity": "none",
+    "maintenance_urgency": "NORMAL OPERATION",
+    "maintenance_message": "All systems nominal. RUL ≈ 7.3d.",
+    "sensor_snapshot": {
+      "temperature_c": 100.913,
+      "vibration_mm_s": 0.236,
+      "pressure_kpa": 139.96,
+      "motor_rpm": 2914.763,
+      "flow_rate_lpm": 46.365,
+      "power_consumption_kw": 48.754,
+      "coolant_temp_c": 96.262,
+      "acoustic_level_db": 72.961,
+      "oil_viscosity_cst": 59.946,
+      "humidity_pct": 51.051,
+      "ambient_temp_c": 19.866,
+      "operating_mode": "normal"
+    },
+    "label": "Conveyor Belt — Pressure Leak",
+    "description": "Pressure instability detected.",
+    "ground_truth": {
+      "is_anomaly": true,
+      "anomaly_type": "pressure_leak",
+      "rul_cycles": 88.83,
+      "rul_days": 5.9,
+      "health_status": "warning"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": true,
+      "pred_is_anomaly": false,
+      "anomaly_correct": false,
+      "gt_rul_cycles": 88.83,
+      "pred_rul_cycles": 88.83,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "pressure_leak",
+      "pred_anomaly_type": "pressure_leak",
+      "type_correct": true
+    },
+    "diagnosis": "pressure_leak",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 5.92,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": false,
+        "confidence": -0.6726397047806421,
+        "reconstruction_error": 0.0008452888578176498,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "humidity_pct",
+          "ambient_temp_c",
+          "pressure_kpa"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.215476688199911,
+        "top_features": [
+          "pressure_kpa",
+          "temperature_c",
+          "oil_viscosity_cst"
+        ]
+      },
+      "rul": {
+        "cycles": 88.83,
+        "days": 5.92,
+        "bracket": "monitor"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_006",
+    "machine_type": "conveyor_belt",
+    "timestamp": "2026-05-07T17:19:22.089890",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 9.94,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.004012765362858772,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": true,
+    "lstm_ae_confidence": 0.5540341919139237,
+    "lstm_ae_top3_features": [
+      "humidity_pct",
+      "pressure_kpa",
+      "ambient_temp_c"
+    ],
+    "if_score": 0.07131944529381129,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "mode_enc",
+      "temperature_c",
+      "oil_viscosity_cst"
+    ],
+    "rul_cycles": 120.86,
+    "rul_days": 8.06,
+    "rul_bracket": "healthy",
+    "anomaly_type_predicted": "sensor_malfunction",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "partial_ae",
+    "ensemble_anomaly_score": 0.6962,
+    "operating_mode": "high_load",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "caution",
+    "health_score": 0.9959872346371412,
+    "color_code": "yellow",
+    "severity": "low",
+    "maintenance_urgency": "MINOR DEVIATION",
+    "maintenance_message": "Sensor deviation noted. Monitor next 24h.",
+    "sensor_snapshot": {
+      "temperature_c": 158.677,
+      "vibration_mm_s": 0.395,
+      "pressure_kpa": 172.486,
+      "motor_rpm": 3604.984,
+      "flow_rate_lpm": 56.351,
+      "power_consumption_kw": 60.663,
+      "coolant_temp_c": 152.841,
+      "acoustic_level_db": 89.368,
+      "oil_viscosity_cst": 37.602,
+      "humidity_pct": 51.205,
+      "ambient_temp_c": 24.145,
+      "operating_mode": "high_load"
+    },
+    "label": "Conveyor Belt — Sensor Fault",
+    "description": "Likely isolated sensor fault.",
+    "ground_truth": {
+      "is_anomaly": true,
+      "anomaly_type": "sensor_malfunction",
+      "rul_cycles": 120.86,
+      "rul_days": 8.1,
+      "health_status": "warning"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": true,
+      "pred_is_anomaly": true,
+      "anomaly_correct": true,
+      "gt_rul_cycles": 120.86,
+      "pred_rul_cycles": 120.86,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "sensor_malfunction",
+      "pred_anomaly_type": "sensor_malfunction",
+      "type_correct": true
+    },
+    "diagnosis": "sensor_malfunction",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 8.06,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": true,
+        "confidence": 0.5540341919139237,
+        "reconstruction_error": 0.004012765362858772,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "humidity_pct",
+          "pressure_kpa",
+          "ambient_temp_c"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.07131944529381129,
+        "top_features": [
+          "mode_enc",
+          "temperature_c",
+          "oil_viscosity_cst"
+        ]
+      },
+      "rul": {
+        "cycles": 120.86,
+        "days": 8.06,
+        "bracket": "healthy"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_007",
+    "machine_type": "hydraulic_press",
+    "timestamp": "2026-05-07T17:19:22.100444",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 10.56,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.0007935349713079631,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": false,
+    "lstm_ae_confidence": -0.692682518526186,
+    "lstm_ae_top3_features": [
+      "humidity_pct",
+      "ambient_temp_c",
+      "cooling_stress"
+    ],
+    "if_score": 0.21187134479149922,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "mode_enc",
+      "temperature_c",
+      "pressure_kpa"
+    ],
+    "rul_cycles": 104.91,
+    "rul_days": 6.99,
+    "rul_bracket": "healthy",
+    "anomaly_type_predicted": "normal",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "clean",
+    "ensemble_anomaly_score": 0.0611,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "healthy",
+    "health_score": 0.999206465028692,
+    "color_code": "green",
+    "severity": "none",
+    "maintenance_urgency": "NORMAL OPERATION",
+    "maintenance_message": "All systems nominal. RUL ≈ 7.3d.",
+    "sensor_snapshot": {
+      "temperature_c": 121.674,
+      "vibration_mm_s": 0.226,
+      "pressure_kpa": 146.179,
+      "motor_rpm": 3103.745,
+      "flow_rate_lpm": 45.644,
+      "power_consumption_kw": 49.942,
+      "coolant_temp_c": 114.66,
+      "acoustic_level_db": 75.149,
+      "oil_viscosity_cst": 52.355,
+      "humidity_pct": 57.15,
+      "ambient_temp_c": 20.999,
+      "operating_mode": "normal"
+    },
+    "label": "Hydraulic Press — Normal Operation",
+    "description": "All sensors within expected range.",
+    "ground_truth": {
+      "is_anomaly": false,
+      "anomaly_type": "normal",
+      "rul_cycles": 104.91,
+      "rul_days": 7.0,
+      "health_status": "healthy"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": false,
+      "pred_is_anomaly": false,
+      "anomaly_correct": true,
+      "gt_rul_cycles": 104.91,
+      "pred_rul_cycles": 104.91,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "normal",
+      "pred_anomaly_type": "normal",
+      "type_correct": true
+    },
+    "diagnosis": "normal",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 6.99,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": false,
+        "confidence": -0.692682518526186,
+        "reconstruction_error": 0.0007935349713079631,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "humidity_pct",
+          "ambient_temp_c",
+          "cooling_stress"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.21187134479149922,
+        "top_features": [
+          "mode_enc",
+          "temperature_c",
+          "pressure_kpa"
+        ]
+      },
+      "rul": {
+        "cycles": 104.91,
+        "days": 6.99,
+        "bracket": "healthy"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_008",
+    "machine_type": "hydraulic_press",
+    "timestamp": "2026-05-07T17:19:22.111031",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 10.59,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.011342517100274563,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": true,
+    "lstm_ae_confidence": 3.3926393437531983,
+    "lstm_ae_top3_features": [
+      "vibration_mm_s",
+      "acoustic_level_db",
+      "humidity_pct"
+    ],
+    "if_score": 0.11191260663532054,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "vibration_mm_s",
+      "acoustic_level_db",
+      "oil_viscosity_cst"
+    ],
+    "rul_cycles": 87.06,
+    "rul_days": 5.8,
+    "rul_bracket": "monitor",
+    "anomaly_type_predicted": "bearing_degradation",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "partial_ae",
+    "ensemble_anomaly_score": 0.6985,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "caution",
+    "health_score": 0.9886574828997254,
+    "color_code": "yellow",
+    "severity": "low",
+    "maintenance_urgency": "MINOR DEVIATION",
+    "maintenance_message": "Sensor deviation noted. Monitor next 24h.",
+    "sensor_snapshot": {
+      "temperature_c": 91.462,
+      "vibration_mm_s": 0.899,
+      "pressure_kpa": 143.993,
+      "motor_rpm": 2824.133,
+      "flow_rate_lpm": 41.157,
+      "power_consumption_kw": 45.744,
+      "coolant_temp_c": 86.165,
+      "acoustic_level_db": 88.347,
+      "oil_viscosity_cst": 64.672,
+      "humidity_pct": 39.044,
+      "ambient_temp_c": 20.423,
+      "operating_mode": "normal"
+    },
+    "label": "Hydraulic Press — Bearing Wear",
+    "description": "Early vibration degradation detected.",
+    "ground_truth": {
+      "is_anomaly": true,
+      "anomaly_type": "bearing_degradation",
+      "rul_cycles": 87.06,
+      "rul_days": 5.8,
+      "health_status": "warning"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": true,
+      "pred_is_anomaly": true,
+      "anomaly_correct": true,
+      "gt_rul_cycles": 87.06,
+      "pred_rul_cycles": 87.06,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "bearing_degradation",
+      "pred_anomaly_type": "bearing_degradation",
+      "type_correct": true
+    },
+    "diagnosis": "bearing_degradation",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 5.8,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": true,
+        "confidence": 3.3926393437531983,
+        "reconstruction_error": 0.011342517100274563,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "vibration_mm_s",
+          "acoustic_level_db",
+          "humidity_pct"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.11191260663532054,
+        "top_features": [
+          "vibration_mm_s",
+          "acoustic_level_db",
+          "oil_viscosity_cst"
+        ]
+      },
+      "rul": {
+        "cycles": 87.06,
+        "days": 5.8,
+        "bracket": "monitor"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_009",
+    "machine_type": "hydraulic_press",
+    "timestamp": "2026-05-07T17:19:22.123669",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 12.64,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.011566291563212872,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": true,
+    "lstm_ae_confidence": 3.47930085236941,
+    "lstm_ae_top3_features": [
+      "vibration_mm_s",
+      "acoustic_level_db",
+      "humidity_pct"
+    ],
+    "if_score": 0.20895740250867784,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "temperature_c",
+      "coolant_temp_c",
+      "oil_viscosity_cst"
+    ],
+    "rul_cycles": 35.85,
+    "rul_days": 2.39,
+    "rul_bracket": "critical",
+    "anomaly_type_predicted": "bearing_degradation",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "partial_ae",
+    "ensemble_anomaly_score": 0.644,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "warning",
+    "health_score": 0.9884337084367871,
+    "color_code": "orange",
+    "severity": "high",
+    "maintenance_urgency": "MINOR DEVIATION",
+    "maintenance_message": "Sensor deviation noted. Monitor next 24h.",
+    "sensor_snapshot": {
+      "temperature_c": 91.504,
+      "vibration_mm_s": 0.236,
+      "pressure_kpa": 143.846,
+      "motor_rpm": 2800.97,
+      "flow_rate_lpm": 40.889,
+      "power_consumption_kw": 46.422,
+      "coolant_temp_c": 86.124,
+      "acoustic_level_db": 73.339,
+      "oil_viscosity_cst": 62.234,
+      "humidity_pct": 38.399,
+      "ambient_temp_c": 20.099,
+      "operating_mode": "normal"
+    },
+    "label": "Hydraulic Press — Bearing Failure",
+    "description": "Severe bearing degradation detected.",
+    "ground_truth": {
+      "is_anomaly": true,
+      "anomaly_type": "bearing_degradation",
+      "rul_cycles": 35.85,
+      "rul_days": 2.4,
+      "health_status": "degraded"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": true,
+      "pred_is_anomaly": true,
+      "anomaly_correct": true,
+      "gt_rul_cycles": 35.85,
+      "pred_rul_cycles": 35.85,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "bearing_degradation",
+      "pred_anomaly_type": "bearing_degradation",
+      "type_correct": true
+    },
+    "diagnosis": "bearing_degradation",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 2.39,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": true,
+        "confidence": 3.47930085236941,
+        "reconstruction_error": 0.011566291563212872,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "vibration_mm_s",
+          "acoustic_level_db",
+          "humidity_pct"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.20895740250867784,
+        "top_features": [
+          "temperature_c",
+          "coolant_temp_c",
+          "oil_viscosity_cst"
+        ]
+      },
+      "rul": {
+        "cycles": 35.85,
+        "days": 2.39,
+        "bracket": "critical"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_010",
+    "machine_type": "hydraulic_press",
+    "timestamp": "2026-05-07T17:19:22.136590",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 11.92,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.001092512160539627,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": false,
+    "lstm_ae_confidence": -0.5768971249632329,
+    "lstm_ae_top3_features": [
+      "humidity_pct",
+      "ambient_temp_c",
+      "temperature_c"
+    ],
+    "if_score": 0.21656299108964033,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "temperature_c",
+      "oil_viscosity_cst",
+      "vibration_mm_s"
+    ],
+    "rul_cycles": 14.45,
+    "rul_days": 0.96,
+    "rul_bracket": "critical",
+    "anomaly_type_predicted": "thermal_runaway",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "clean",
+    "ensemble_anomaly_score": 0.0729,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "degraded",
+    "health_score": 0.9989074878394604,
+    "color_code": "orange",
+    "severity": "high",
+    "maintenance_urgency": "NORMAL OPERATION",
+    "maintenance_message": "All systems nominal. RUL ≈ 7.3d.",
+    "sensor_snapshot": {
+      "temperature_c": 95.587,
+      "vibration_mm_s": 0.182,
+      "pressure_kpa": 148.96,
+      "motor_rpm": 3080.285,
+      "flow_rate_lpm": 47.223,
+      "power_consumption_kw": 50.531,
+      "coolant_temp_c": 90.212,
+      "acoustic_level_db": 69.116,
+      "oil_viscosity_cst": 61.604,
+      "humidity_pct": 42.419,
+      "ambient_temp_c": 23.854,
+      "operating_mode": "normal"
+    },
+    "label": "Hydraulic Press — Thermal Escalation",
+    "description": "Temperature rising beyond safe range.",
+    "ground_truth": {
+      "is_anomaly": true,
+      "anomaly_type": "thermal_runaway",
+      "rul_cycles": 14.45,
+      "rul_days": 1.0,
+      "health_status": "critical"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": true,
+      "pred_is_anomaly": false,
+      "anomaly_correct": false,
+      "gt_rul_cycles": 14.45,
+      "pred_rul_cycles": 14.45,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "thermal_runaway",
+      "pred_anomaly_type": "thermal_runaway",
+      "type_correct": true
+    },
+    "diagnosis": "thermal_runaway",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 0.96,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": false,
+        "confidence": -0.5768971249632329,
+        "reconstruction_error": 0.001092512160539627,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "humidity_pct",
+          "ambient_temp_c",
+          "temperature_c"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.21656299108964033,
+        "top_features": [
+          "temperature_c",
+          "oil_viscosity_cst",
+          "vibration_mm_s"
+        ]
+      },
+      "rul": {
+        "cycles": 14.45,
+        "days": 0.96,
+        "bracket": "critical"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_011",
+    "machine_type": "hydraulic_press",
+    "timestamp": "2026-05-07T17:19:22.146816",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 10.23,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.0014310618862509727,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": false,
+    "lstm_ae_confidence": -0.44578640935026215,
+    "lstm_ae_top3_features": [
+      "pressure_kpa",
+      "humidity_pct",
+      "ambient_temp_c"
+    ],
+    "if_score": 0.21114571086002226,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "temperature_c",
+      "oil_viscosity_cst",
+      "mode_enc"
+    ],
+    "rul_cycles": 77.35,
+    "rul_days": 5.16,
+    "rul_bracket": "monitor",
+    "anomaly_type_predicted": "pressure_leak",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "clean",
+    "ensemble_anomaly_score": 0.1015,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "healthy",
+    "health_score": 0.998568938113749,
+    "color_code": "green",
+    "severity": "none",
+    "maintenance_urgency": "NORMAL OPERATION",
+    "maintenance_message": "All systems nominal. RUL ≈ 7.3d.",
+    "sensor_snapshot": {
+      "temperature_c": 125.085,
+      "vibration_mm_s": 0.221,
+      "pressure_kpa": 150.909,
+      "motor_rpm": 3223.969,
+      "flow_rate_lpm": 47.415,
+      "power_consumption_kw": 53.211,
+      "coolant_temp_c": 117.602,
+      "acoustic_level_db": 75.205,
+      "oil_viscosity_cst": 50.735,
+      "humidity_pct": 42.758,
+      "ambient_temp_c": 25.118,
+      "operating_mode": "normal"
+    },
+    "label": "Hydraulic Press — Pressure Leak",
+    "description": "Pressure instability detected.",
+    "ground_truth": {
+      "is_anomaly": true,
+      "anomaly_type": "pressure_leak",
+      "rul_cycles": 77.35,
+      "rul_days": 5.2,
+      "health_status": "warning"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": true,
+      "pred_is_anomaly": false,
+      "anomaly_correct": false,
+      "gt_rul_cycles": 77.35,
+      "pred_rul_cycles": 77.35,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "pressure_leak",
+      "pred_anomaly_type": "pressure_leak",
+      "type_correct": true
+    },
+    "diagnosis": "pressure_leak",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 5.16,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": false,
+        "confidence": -0.44578640935026215,
+        "reconstruction_error": 0.0014310618862509727,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "pressure_kpa",
+          "humidity_pct",
+          "ambient_temp_c"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.21114571086002226,
+        "top_features": [
+          "temperature_c",
+          "oil_viscosity_cst",
+          "mode_enc"
+        ]
+      },
+      "rul": {
+        "cycles": 77.35,
+        "days": 5.16,
+        "bracket": "monitor"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_012",
+    "machine_type": "hydraulic_press",
+    "timestamp": "2026-05-07T17:19:22.158017",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 10.2,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.012042722664773464,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": true,
+    "lstm_ae_confidence": 3.6638091178380527,
+    "lstm_ae_top3_features": [
+      "pressure_kpa",
+      "humidity_pct",
+      "ambient_temp_c"
+    ],
+    "if_score": 0.21679582320056584,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "vibration_mm_s",
+      "temperature_c",
+      "oil_viscosity_cst"
+    ],
+    "rul_cycles": 108.73,
+    "rul_days": 7.25,
+    "rul_bracket": "healthy",
+    "anomaly_type_predicted": "sensor_malfunction",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "partial_ae",
+    "ensemble_anomaly_score": 0.6411,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "caution",
+    "health_score": 0.9879572773352265,
+    "color_code": "yellow",
+    "severity": "low",
+    "maintenance_urgency": "MINOR DEVIATION",
+    "maintenance_message": "Sensor deviation noted. Monitor next 24h.",
+    "sensor_snapshot": {
+      "temperature_c": 97.988,
+      "vibration_mm_s": 0.179,
+      "pressure_kpa": 146.321,
+      "motor_rpm": 3002.695,
+      "flow_rate_lpm": 44.674,
+      "power_consumption_kw": 49.025,
+      "coolant_temp_c": 92.963,
+      "acoustic_level_db": 71.031,
+      "oil_viscosity_cst": 60.635,
+      "humidity_pct": 47.504,
+      "ambient_temp_c": 24.73,
+      "operating_mode": "normal"
+    },
+    "label": "Hydraulic Press — Sensor Fault",
+    "description": "Likely isolated sensor fault.",
+    "ground_truth": {
+      "is_anomaly": true,
+      "anomaly_type": "sensor_malfunction",
+      "rul_cycles": 108.73,
+      "rul_days": 7.2,
+      "health_status": "warning"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": true,
+      "pred_is_anomaly": true,
+      "anomaly_correct": true,
+      "gt_rul_cycles": 108.73,
+      "pred_rul_cycles": 108.73,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "sensor_malfunction",
+      "pred_anomaly_type": "sensor_malfunction",
+      "type_correct": true
+    },
+    "diagnosis": "sensor_malfunction",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 7.25,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": true,
+        "confidence": 3.6638091178380527,
+        "reconstruction_error": 0.012042722664773464,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "pressure_kpa",
+          "humidity_pct",
+          "ambient_temp_c"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.21679582320056584,
+        "top_features": [
+          "vibration_mm_s",
+          "temperature_c",
+          "oil_viscosity_cst"
+        ]
+      },
+      "rul": {
+        "cycles": 108.73,
+        "days": 7.25,
+        "bracket": "healthy"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_013",
+    "machine_type": "cnc_machine",
+    "timestamp": "2026-05-07T17:19:22.170108",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 12.09,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.0010746886255219579,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": false,
+    "lstm_ae_confidence": -0.5837996750273611,
+    "lstm_ae_top3_features": [
+      "humidity_pct",
+      "ambient_temp_c",
+      "temperature_c"
+    ],
+    "if_score": 0.21283034008193424,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "temperature_c",
+      "oil_viscosity_cst",
+      "coolant_temp_c"
+    ],
+    "rul_cycles": 105.71,
+    "rul_days": 7.05,
+    "rul_bracket": "healthy",
+    "anomaly_type_predicted": "normal",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "clean",
+    "ensemble_anomaly_score": 0.0733,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "healthy",
+    "health_score": 0.998925311374478,
+    "color_code": "green",
+    "severity": "none",
+    "maintenance_urgency": "NORMAL OPERATION",
+    "maintenance_message": "All systems nominal. RUL ≈ 7.3d.",
+    "sensor_snapshot": {
+      "temperature_c": 136.997,
+      "vibration_mm_s": 0.261,
+      "pressure_kpa": 148.922,
+      "motor_rpm": 2992.121,
+      "flow_rate_lpm": 43.804,
+      "power_consumption_kw": 49.115,
+      "coolant_temp_c": 130.499,
+      "acoustic_level_db": 76.258,
+      "oil_viscosity_cst": 46.142,
+      "humidity_pct": 54.941,
+      "ambient_temp_c": 22.978,
+      "operating_mode": "normal"
+    },
+    "label": "CNC Machine — Normal Operation",
+    "description": "All sensors within expected range.",
+    "ground_truth": {
+      "is_anomaly": false,
+      "anomaly_type": "normal",
+      "rul_cycles": 105.71,
+      "rul_days": 7.0,
+      "health_status": "healthy"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": false,
+      "pred_is_anomaly": false,
+      "anomaly_correct": true,
+      "gt_rul_cycles": 105.71,
+      "pred_rul_cycles": 105.71,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "normal",
+      "pred_anomaly_type": "normal",
+      "type_correct": true
+    },
+    "diagnosis": "normal",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 7.05,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": false,
+        "confidence": -0.5837996750273611,
+        "reconstruction_error": 0.0010746886255219579,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "humidity_pct",
+          "ambient_temp_c",
+          "temperature_c"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.21283034008193424,
+        "top_features": [
+          "temperature_c",
+          "oil_viscosity_cst",
+          "coolant_temp_c"
+        ]
+      },
+      "rul": {
+        "cycles": 105.71,
+        "days": 7.05,
+        "bracket": "healthy"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_014",
+    "machine_type": "cnc_machine",
+    "timestamp": "2026-05-07T17:19:22.182783",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 12.68,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.004675108939409256,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": true,
+    "lstm_ae_confidence": 0.8105410909247653,
+    "lstm_ae_top3_features": [
+      "vibration_mm_s",
+      "humidity_pct",
+      "acoustic_level_db"
+    ],
+    "if_score": 0.21973801277546268,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "temperature_c",
+      "oil_viscosity_cst",
+      "coolant_temp_c"
+    ],
+    "rul_cycles": 65.73,
+    "rul_days": 4.38,
+    "rul_bracket": "monitor",
+    "anomaly_type_predicted": "bearing_degradation",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "partial_ae",
+    "ensemble_anomaly_score": 0.6297,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "caution",
+    "health_score": 0.9953248910605907,
+    "color_code": "yellow",
+    "severity": "low",
+    "maintenance_urgency": "MINOR DEVIATION",
+    "maintenance_message": "Sensor deviation noted. Monitor next 24h.",
+    "sensor_snapshot": {
+      "temperature_c": 98.96,
+      "vibration_mm_s": 0.205,
+      "pressure_kpa": 153.346,
+      "motor_rpm": 3000.429,
+      "flow_rate_lpm": 45.455,
+      "power_consumption_kw": 49.286,
+      "coolant_temp_c": 93.756,
+      "acoustic_level_db": 73.867,
+      "oil_viscosity_cst": 60.545,
+      "humidity_pct": 33.642,
+      "ambient_temp_c": 22.217,
+      "operating_mode": "normal"
+    },
+    "label": "CNC Machine — Bearing Wear",
+    "description": "Early vibration degradation detected.",
+    "ground_truth": {
+      "is_anomaly": true,
+      "anomaly_type": "bearing_degradation",
+      "rul_cycles": 65.73,
+      "rul_days": 4.4,
+      "health_status": "warning"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": true,
+      "pred_is_anomaly": true,
+      "anomaly_correct": true,
+      "gt_rul_cycles": 65.73,
+      "pred_rul_cycles": 65.73,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "bearing_degradation",
+      "pred_anomaly_type": "bearing_degradation",
+      "type_correct": true
+    },
+    "diagnosis": "bearing_degradation",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 4.38,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": true,
+        "confidence": 0.8105410909247653,
+        "reconstruction_error": 0.004675108939409256,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "vibration_mm_s",
+          "humidity_pct",
+          "acoustic_level_db"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.21973801277546268,
+        "top_features": [
+          "temperature_c",
+          "oil_viscosity_cst",
+          "coolant_temp_c"
+        ]
+      },
+      "rul": {
+        "cycles": 65.73,
+        "days": 4.38,
+        "bracket": "monitor"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_015",
+    "machine_type": "cnc_machine",
+    "timestamp": "2026-05-07T17:19:22.195940",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 13.16,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.010425004176795483,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": true,
+    "lstm_ae_confidence": 3.037312587163067,
+    "lstm_ae_top3_features": [
+      "vibration_mm_s",
+      "acoustic_level_db",
+      "humidity_pct"
+    ],
+    "if_score": 0.11996052670748619,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "vibration_mm_s",
+      "temperature_c",
+      "acoustic_level_db"
+    ],
+    "rul_cycles": 20.35,
+    "rul_days": 1.36,
+    "rul_bracket": "critical",
+    "anomaly_type_predicted": "bearing_degradation",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "partial_ae",
+    "ensemble_anomaly_score": 0.6926,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "warning",
+    "health_score": 0.9895749958232045,
+    "color_code": "orange",
+    "severity": "high",
+    "maintenance_urgency": "MINOR DEVIATION",
+    "maintenance_message": "Sensor deviation noted. Monitor next 24h.",
+    "sensor_snapshot": {
+      "temperature_c": 135.734,
+      "vibration_mm_s": 1.004,
+      "pressure_kpa": 142.008,
+      "motor_rpm": 2758.973,
+      "flow_rate_lpm": 43.0,
+      "power_consumption_kw": 46.199,
+      "coolant_temp_c": 128.512,
+      "acoustic_level_db": 87.597,
+      "oil_viscosity_cst": 46.816,
+      "humidity_pct": 52.659,
+      "ambient_temp_c": 24.648,
+      "operating_mode": "normal"
+    },
+    "label": "CNC Machine — Bearing Failure",
+    "description": "Severe bearing degradation detected.",
+    "ground_truth": {
+      "is_anomaly": true,
+      "anomaly_type": "bearing_degradation",
+      "rul_cycles": 20.35,
+      "rul_days": 1.4,
+      "health_status": "degraded"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": true,
+      "pred_is_anomaly": true,
+      "anomaly_correct": true,
+      "gt_rul_cycles": 20.35,
+      "pred_rul_cycles": 20.35,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "bearing_degradation",
+      "pred_anomaly_type": "bearing_degradation",
+      "type_correct": true
+    },
+    "diagnosis": "bearing_degradation",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 1.36,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": true,
+        "confidence": 3.037312587163067,
+        "reconstruction_error": 0.010425004176795483,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "vibration_mm_s",
+          "acoustic_level_db",
+          "humidity_pct"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.11996052670748619,
+        "top_features": [
+          "vibration_mm_s",
+          "temperature_c",
+          "acoustic_level_db"
+        ]
+      },
+      "rul": {
+        "cycles": 20.35,
+        "days": 1.36,
+        "bracket": "critical"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_016",
+    "machine_type": "cnc_machine",
+    "timestamp": "2026-05-07T17:19:22.208335",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 12.4,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.0012931136880069971,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": false,
+    "lstm_ae_confidence": -0.49920983762593146,
+    "lstm_ae_top3_features": [
+      "humidity_pct",
+      "ambient_temp_c",
+      "temperature_c"
+    ],
+    "if_score": 0.21760262152840865,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "vibration_mm_s",
+      "mode_enc",
+      "acoustic_level_db"
+    ],
+    "rul_cycles": 9.1,
+    "rul_days": 0.61,
+    "rul_bracket": "critical",
+    "anomaly_type_predicted": "thermal_runaway",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "clean",
+    "ensemble_anomaly_score": 0.0865,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "degraded",
+    "health_score": 0.998706886311993,
+    "color_code": "orange",
+    "severity": "high",
+    "maintenance_urgency": "NORMAL OPERATION",
+    "maintenance_message": "All systems nominal. RUL ≈ 7.3d.",
+    "sensor_snapshot": {
+      "temperature_c": 103.781,
+      "vibration_mm_s": 0.2,
+      "pressure_kpa": 149.688,
+      "motor_rpm": 2997.312,
+      "flow_rate_lpm": 44.735,
+      "power_consumption_kw": 50.099,
+      "coolant_temp_c": 95.504,
+      "acoustic_level_db": 70.075,
+      "oil_viscosity_cst": 57.883,
+      "humidity_pct": 47.399,
+      "ambient_temp_c": 24.739,
+      "operating_mode": "normal"
+    },
+    "label": "CNC Machine — Thermal Escalation",
+    "description": "Temperature rising beyond safe range.",
+    "ground_truth": {
+      "is_anomaly": true,
+      "anomaly_type": "thermal_runaway",
+      "rul_cycles": 9.1,
+      "rul_days": 0.6,
+      "health_status": "critical"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": true,
+      "pred_is_anomaly": false,
+      "anomaly_correct": false,
+      "gt_rul_cycles": 9.1,
+      "pred_rul_cycles": 9.1,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "thermal_runaway",
+      "pred_anomaly_type": "thermal_runaway",
+      "type_correct": true
+    },
+    "diagnosis": "thermal_runaway",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 0.61,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": false,
+        "confidence": -0.49920983762593146,
+        "reconstruction_error": 0.0012931136880069971,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "humidity_pct",
+          "ambient_temp_c",
+          "temperature_c"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.21760262152840865,
+        "top_features": [
+          "vibration_mm_s",
+          "mode_enc",
+          "acoustic_level_db"
+        ]
+      },
+      "rul": {
+        "cycles": 9.1,
+        "days": 0.61,
+        "bracket": "critical"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_017",
+    "machine_type": "cnc_machine",
+    "timestamp": "2026-05-07T17:19:22.220890",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 12.55,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.0027077856939285994,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": true,
+    "lstm_ae_confidence": 0.048652544079734905,
+    "lstm_ae_top3_features": [
+      "cooling_stress",
+      "coolant_temp_c",
+      "pressure_kpa"
+    ],
+    "if_score": 0.11456560070111277,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "mode_enc",
+      "temperature_c",
+      "vibration_mm_s"
+    ],
+    "rul_cycles": 54.45,
+    "rul_days": 3.63,
+    "rul_bracket": "monitor",
+    "anomaly_type_predicted": "pressure_leak",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "partial_ae",
+    "ensemble_anomaly_score": 0.4328,
+    "operating_mode": "high_load",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "caution",
+    "health_score": 0.9972922143060714,
+    "color_code": "yellow",
+    "severity": "low",
+    "maintenance_urgency": "MINOR DEVIATION",
+    "maintenance_message": "Sensor deviation noted. Monitor next 24h.",
+    "sensor_snapshot": {
+      "temperature_c": 145.704,
+      "vibration_mm_s": 0.416,
+      "pressure_kpa": 163.772,
+      "motor_rpm": 3349.118,
+      "flow_rate_lpm": 54.647,
+      "power_consumption_kw": 55.892,
+      "coolant_temp_c": 136.927,
+      "acoustic_level_db": 90.016,
+      "oil_viscosity_cst": 43.485,
+      "humidity_pct": 49.689,
+      "ambient_temp_c": 18.973,
+      "operating_mode": "high_load"
+    },
+    "label": "CNC Machine — Pressure Leak",
+    "description": "Pressure instability detected.",
+    "ground_truth": {
+      "is_anomaly": true,
+      "anomaly_type": "pressure_leak",
+      "rul_cycles": 54.45,
+      "rul_days": 3.6,
+      "health_status": "warning"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": true,
+      "pred_is_anomaly": true,
+      "anomaly_correct": true,
+      "gt_rul_cycles": 54.45,
+      "pred_rul_cycles": 54.45,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "pressure_leak",
+      "pred_anomaly_type": "pressure_leak",
+      "type_correct": true
+    },
+    "diagnosis": "pressure_leak",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 3.63,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": true,
+        "confidence": 0.048652544079734905,
+        "reconstruction_error": 0.0027077856939285994,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "cooling_stress",
+          "coolant_temp_c",
+          "pressure_kpa"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.11456560070111277,
+        "top_features": [
+          "mode_enc",
+          "temperature_c",
+          "vibration_mm_s"
+        ]
+      },
+      "rul": {
+        "cycles": 54.45,
+        "days": 3.63,
+        "bracket": "monitor"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_018",
+    "machine_type": "cnc_machine",
+    "timestamp": "2026-05-07T17:19:22.234974",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 14.08,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.0017280048923566937,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": false,
+    "lstm_ae_confidence": -0.33078879727131355,
+    "lstm_ae_top3_features": [
+      "motor_rpm",
+      "humidity_pct",
+      "ambient_temp_c"
+    ],
+    "if_score": 0.1342543497350953,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "temperature_c",
+      "oil_viscosity_cst",
+      "coolant_temp_c"
+    ],
+    "rul_cycles": 120.02,
+    "rul_days": 8.0,
+    "rul_bracket": "healthy",
+    "anomaly_type_predicted": "sensor_malfunction",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "clean",
+    "ensemble_anomaly_score": 0.1792,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "healthy",
+    "health_score": 0.9982719951076433,
+    "color_code": "green",
+    "severity": "none",
+    "maintenance_urgency": "NORMAL OPERATION",
+    "maintenance_message": "All systems nominal. RUL ≈ 7.3d.",
+    "sensor_snapshot": {
+      "temperature_c": 144.604,
+      "vibration_mm_s": 0.309,
+      "pressure_kpa": 146.499,
+      "motor_rpm": 3741.492,
+      "flow_rate_lpm": 42.766,
+      "power_consumption_kw": 47.602,
+      "coolant_temp_c": 137.113,
+      "acoustic_level_db": 77.86,
+      "oil_viscosity_cst": 42.65,
+      "humidity_pct": 52.662,
+      "ambient_temp_c": 18.961,
+      "operating_mode": "normal"
+    },
+    "label": "CNC Machine — Sensor Fault",
+    "description": "Likely isolated sensor fault.",
+    "ground_truth": {
+      "is_anomaly": true,
+      "anomaly_type": "sensor_malfunction",
+      "rul_cycles": 120.02,
+      "rul_days": 8.0,
+      "health_status": "warning"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": true,
+      "pred_is_anomaly": false,
+      "anomaly_correct": false,
+      "gt_rul_cycles": 120.02,
+      "pred_rul_cycles": 120.02,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "sensor_malfunction",
+      "pred_anomaly_type": "sensor_malfunction",
+      "type_correct": true
+    },
+    "diagnosis": "sensor_malfunction",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 8.0,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": false,
+        "confidence": -0.33078879727131355,
+        "reconstruction_error": 0.0017280048923566937,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "motor_rpm",
+          "humidity_pct",
+          "ambient_temp_c"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.1342543497350953,
+        "top_features": [
+          "temperature_c",
+          "oil_viscosity_cst",
+          "coolant_temp_c"
+        ]
+      },
+      "rul": {
+        "cycles": 120.02,
+        "days": 8.0,
+        "bracket": "healthy"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_019",
+    "machine_type": "robotic_welding_arm",
+    "timestamp": "2026-05-07T17:19:22.247612",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 11.64,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.0006790559855289757,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": false,
+    "lstm_ae_confidence": -0.7370169858384633,
+    "lstm_ae_top3_features": [
+      "humidity_pct",
+      "temperature_c",
+      "oil_viscosity_cst"
+    ],
+    "if_score": 0.20306875120894363,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "temperature_c",
+      "oil_viscosity_cst",
+      "coolant_temp_c"
+    ],
+    "rul_cycles": 90.84,
+    "rul_days": 6.06,
+    "rul_bracket": "healthy",
+    "anomaly_type_predicted": "normal",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "clean",
+    "ensemble_anomaly_score": 0.0611,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "healthy",
+    "health_score": 0.999320944014471,
+    "color_code": "green",
+    "severity": "none",
+    "maintenance_urgency": "NORMAL OPERATION",
+    "maintenance_message": "All systems nominal. RUL ≈ 7.3d.",
+    "sensor_snapshot": {
+      "temperature_c": 143.374,
+      "vibration_mm_s": 0.31,
+      "pressure_kpa": 143.476,
+      "motor_rpm": 2874.602,
+      "flow_rate_lpm": 43.414,
+      "power_consumption_kw": 46.922,
+      "coolant_temp_c": 136.953,
+      "acoustic_level_db": 78.135,
+      "oil_viscosity_cst": 43.162,
+      "humidity_pct": 45.146,
+      "ambient_temp_c": 24.836,
+      "operating_mode": "normal"
+    },
+    "label": "Robotic Welding Arm — Normal Operation",
+    "description": "All sensors within expected range.",
+    "ground_truth": {
+      "is_anomaly": false,
+      "anomaly_type": "normal",
+      "rul_cycles": 90.84,
+      "rul_days": 6.1,
+      "health_status": "healthy"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": false,
+      "pred_is_anomaly": false,
+      "anomaly_correct": true,
+      "gt_rul_cycles": 90.84,
+      "pred_rul_cycles": 90.84,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "normal",
+      "pred_anomaly_type": "normal",
+      "type_correct": true
+    },
+    "diagnosis": "normal",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 6.06,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": false,
+        "confidence": -0.7370169858384633,
+        "reconstruction_error": 0.0006790559855289757,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "humidity_pct",
+          "temperature_c",
+          "oil_viscosity_cst"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.20306875120894363,
+        "top_features": [
+          "temperature_c",
+          "oil_viscosity_cst",
+          "coolant_temp_c"
+        ]
+      },
+      "rul": {
+        "cycles": 90.84,
+        "days": 6.06,
+        "bracket": "healthy"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_020",
+    "machine_type": "robotic_welding_arm",
+    "timestamp": "2026-05-07T17:19:22.259278",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 11.67,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.010019543580710888,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": true,
+    "lstm_ae_confidence": 2.8802891874429375,
+    "lstm_ae_top3_features": [
+      "vibration_mm_s",
+      "acoustic_level_db",
+      "humidity_pct"
+    ],
+    "if_score": 0.22476769234038907,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "mode_enc",
+      "oil_viscosity_cst",
+      "pressure_kpa"
+    ],
+    "rul_cycles": 66.96,
+    "rul_days": 4.46,
+    "rul_bracket": "monitor",
+    "anomaly_type_predicted": "bearing_degradation",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "partial_ae",
+    "ensemble_anomaly_score": 0.6382,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "caution",
+    "health_score": 0.9899804564192891,
+    "color_code": "yellow",
+    "severity": "low",
+    "maintenance_urgency": "MINOR DEVIATION",
+    "maintenance_message": "Sensor deviation noted. Monitor next 24h.",
+    "sensor_snapshot": {
+      "temperature_c": 109.131,
+      "vibration_mm_s": 0.245,
+      "pressure_kpa": 148.846,
+      "motor_rpm": 2920.877,
+      "flow_rate_lpm": 44.896,
+      "power_consumption_kw": 47.807,
+      "coolant_temp_c": 103.915,
+      "acoustic_level_db": 74.591,
+      "oil_viscosity_cst": 57.198,
+      "humidity_pct": 44.857,
+      "ambient_temp_c": 19.757,
+      "operating_mode": "normal"
+    },
+    "label": "Robotic Welding Arm — Bearing Wear",
+    "description": "Early vibration degradation detected.",
+    "ground_truth": {
+      "is_anomaly": true,
+      "anomaly_type": "bearing_degradation",
+      "rul_cycles": 66.96,
+      "rul_days": 4.5,
+      "health_status": "warning"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": true,
+      "pred_is_anomaly": true,
+      "anomaly_correct": true,
+      "gt_rul_cycles": 66.96,
+      "pred_rul_cycles": 66.96,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "bearing_degradation",
+      "pred_anomaly_type": "bearing_degradation",
+      "type_correct": true
+    },
+    "diagnosis": "bearing_degradation",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 4.46,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": true,
+        "confidence": 2.8802891874429375,
+        "reconstruction_error": 0.010019543580710888,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "vibration_mm_s",
+          "acoustic_level_db",
+          "humidity_pct"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.22476769234038907,
+        "top_features": [
+          "mode_enc",
+          "oil_viscosity_cst",
+          "pressure_kpa"
+        ]
+      },
+      "rul": {
+        "cycles": 66.96,
+        "days": 4.46,
+        "bracket": "monitor"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_021",
+    "machine_type": "robotic_welding_arm",
+    "timestamp": "2026-05-07T17:19:22.272889",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 12.36,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.004060312639921904,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": true,
+    "lstm_ae_confidence": 0.5724479050194263,
+    "lstm_ae_top3_features": [
+      "vibration_mm_s",
+      "humidity_pct",
+      "acoustic_level_db"
+    ],
+    "if_score": 0.19122997389339402,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "temperature_c",
+      "oil_viscosity_cst",
+      "coolant_temp_c"
+    ],
+    "rul_cycles": 45.16,
+    "rul_days": 3.01,
+    "rul_bracket": "critical",
+    "anomaly_type_predicted": "bearing_degradation",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "partial_ae",
+    "ensemble_anomaly_score": 0.6191,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "warning",
+    "health_score": 0.9959396873600781,
+    "color_code": "orange",
+    "severity": "high",
+    "maintenance_urgency": "MINOR DEVIATION",
+    "maintenance_message": "Sensor deviation noted. Monitor next 24h.",
+    "sensor_snapshot": {
+      "temperature_c": 143.012,
+      "vibration_mm_s": 0.291,
+      "pressure_kpa": 150.266,
+      "motor_rpm": 2994.433,
+      "flow_rate_lpm": 44.836,
+      "power_consumption_kw": 47.562,
+      "coolant_temp_c": 134.834,
+      "acoustic_level_db": 77.412,
+      "oil_viscosity_cst": 43.331,
+      "humidity_pct": 35.972,
+      "ambient_temp_c": 23.179,
+      "operating_mode": "normal"
+    },
+    "label": "Robotic Welding Arm — Bearing Failure",
+    "description": "Severe bearing degradation detected.",
+    "ground_truth": {
+      "is_anomaly": true,
+      "anomaly_type": "bearing_degradation",
+      "rul_cycles": 45.16,
+      "rul_days": 3.0,
+      "health_status": "degraded"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": true,
+      "pred_is_anomaly": true,
+      "anomaly_correct": true,
+      "gt_rul_cycles": 45.16,
+      "pred_rul_cycles": 45.16,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "bearing_degradation",
+      "pred_anomaly_type": "bearing_degradation",
+      "type_correct": true
+    },
+    "diagnosis": "bearing_degradation",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 3.01,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": true,
+        "confidence": 0.5724479050194263,
+        "reconstruction_error": 0.004060312639921904,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "vibration_mm_s",
+          "humidity_pct",
+          "acoustic_level_db"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.19122997389339402,
+        "top_features": [
+          "temperature_c",
+          "oil_viscosity_cst",
+          "coolant_temp_c"
+        ]
+      },
+      "rul": {
+        "cycles": 45.16,
+        "days": 3.01,
+        "bracket": "critical"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_022",
+    "machine_type": "robotic_welding_arm",
+    "timestamp": "2026-05-07T17:19:22.285229",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 12.34,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.001335597364231944,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": false,
+    "lstm_ae_confidence": -0.4827571136427146,
+    "lstm_ae_top3_features": [
+      "temperature_c",
+      "humidity_pct",
+      "cooling_stress"
+    ],
+    "if_score": 0.17054759321144947,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "temperature_c",
+      "oil_viscosity_cst",
+      "coolant_temp_c"
+    ],
+    "rul_cycles": 5.98,
+    "rul_days": 0.4,
+    "rul_bracket": "critical",
+    "anomaly_type_predicted": "thermal_runaway",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "clean",
+    "ensemble_anomaly_score": 0.1108,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "degraded",
+    "health_score": 0.9986644026357681,
+    "color_code": "orange",
+    "severity": "high",
+    "maintenance_urgency": "NORMAL OPERATION",
+    "maintenance_message": "All systems nominal. RUL ≈ 7.3d.",
+    "sensor_snapshot": {
+      "temperature_c": 74.404,
+      "vibration_mm_s": 0.13,
+      "pressure_kpa": 153.836,
+      "motor_rpm": 3187.43,
+      "flow_rate_lpm": 47.162,
+      "power_consumption_kw": 51.49,
+      "coolant_temp_c": 68.215,
+      "acoustic_level_db": 66.07,
+      "oil_viscosity_cst": 69.643,
+      "humidity_pct": 37.417,
+      "ambient_temp_c": 23.207,
+      "operating_mode": "normal"
+    },
+    "label": "Robotic Welding Arm — Thermal Escalation",
+    "description": "Temperature rising beyond safe range.",
+    "ground_truth": {
+      "is_anomaly": true,
+      "anomaly_type": "thermal_runaway",
+      "rul_cycles": 5.98,
+      "rul_days": 0.4,
+      "health_status": "critical"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": true,
+      "pred_is_anomaly": false,
+      "anomaly_correct": false,
+      "gt_rul_cycles": 5.98,
+      "pred_rul_cycles": 5.98,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "thermal_runaway",
+      "pred_anomaly_type": "thermal_runaway",
+      "type_correct": true
+    },
+    "diagnosis": "thermal_runaway",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 0.4,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": false,
+        "confidence": -0.4827571136427146,
+        "reconstruction_error": 0.001335597364231944,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "temperature_c",
+          "humidity_pct",
+          "cooling_stress"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.17054759321144947,
+        "top_features": [
+          "temperature_c",
+          "oil_viscosity_cst",
+          "coolant_temp_c"
+        ]
+      },
+      "rul": {
+        "cycles": 5.98,
+        "days": 0.4,
+        "bracket": "critical"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_023",
+    "machine_type": "robotic_welding_arm",
+    "timestamp": "2026-05-07T17:19:22.298897",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 13.67,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.0007434915751218796,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": false,
+    "lstm_ae_confidence": -0.7120629078379028,
+    "lstm_ae_top3_features": [
+      "humidity_pct",
+      "ambient_temp_c",
+      "pressure_kpa"
+    ],
+    "if_score": 0.21487634095068348,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "temperature_c",
+      "coolant_temp_c",
+      "oil_viscosity_cst"
+    ],
+    "rul_cycles": 76.87,
+    "rul_days": 5.12,
+    "rul_bracket": "monitor",
+    "anomaly_type_predicted": "pressure_leak",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "clean",
+    "ensemble_anomaly_score": 0.0584,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "healthy",
+    "health_score": 0.9992565084248781,
+    "color_code": "green",
+    "severity": "none",
+    "maintenance_urgency": "NORMAL OPERATION",
+    "maintenance_message": "All systems nominal. RUL ≈ 7.3d.",
+    "sensor_snapshot": {
+      "temperature_c": 94.578,
+      "vibration_mm_s": 0.187,
+      "pressure_kpa": 145.915,
+      "motor_rpm": 3096.792,
+      "flow_rate_lpm": 47.234,
+      "power_consumption_kw": 51.467,
+      "coolant_temp_c": 88.869,
+      "acoustic_level_db": 69.315,
+      "oil_viscosity_cst": 61.563,
+      "humidity_pct": 41.574,
+      "ambient_temp_c": 18.956,
+      "operating_mode": "normal"
+    },
+    "label": "Robotic Welding Arm — Pressure Leak",
+    "description": "Pressure instability detected.",
+    "ground_truth": {
+      "is_anomaly": true,
+      "anomaly_type": "pressure_leak",
+      "rul_cycles": 76.87,
+      "rul_days": 5.1,
+      "health_status": "warning"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": true,
+      "pred_is_anomaly": false,
+      "anomaly_correct": false,
+      "gt_rul_cycles": 76.87,
+      "pred_rul_cycles": 76.87,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "pressure_leak",
+      "pred_anomaly_type": "pressure_leak",
+      "type_correct": true
+    },
+    "diagnosis": "pressure_leak",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 5.12,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": false,
+        "confidence": -0.7120629078379028,
+        "reconstruction_error": 0.0007434915751218796,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "humidity_pct",
+          "ambient_temp_c",
+          "pressure_kpa"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.21487634095068348,
+        "top_features": [
+          "temperature_c",
+          "coolant_temp_c",
+          "oil_viscosity_cst"
+        ]
+      },
+      "rul": {
+        "cycles": 76.87,
+        "days": 5.12,
+        "bracket": "monitor"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN_024",
+    "machine_type": "robotic_welding_arm",
+    "timestamp": "2026-05-07T17:19:22.311363",
+    "pipeline_version": "1.0.0",
+    "inference_time_ms": 12.47,
+    "models_run": [
+      "lstm_ae",
+      "if",
+      "rul"
+    ],
+    "lstm_ae_recon_error": 0.0048190453089773655,
+    "lstm_ae_threshold": 0.002582156714051962,
+    "lstm_ae_anomaly_flag": true,
+    "lstm_ae_confidence": 0.8662835682732721,
+    "lstm_ae_top3_features": [
+      "pressure_kpa",
+      "humidity_pct",
+      "ambient_temp_c"
+    ],
+    "if_score": 0.21371748223263604,
+    "if_anomaly_flag": false,
+    "if_top3_features": [
+      "pressure_kpa",
+      "mode_enc",
+      "motor_rpm"
+    ],
+    "rul_cycles": 103.68,
+    "rul_days": 6.91,
+    "rul_bracket": "healthy",
+    "anomaly_type_predicted": "sensor_malfunction",
+    "anomaly_type_confidence": "high",
+    "model_consensus": false,
+    "consensus_strength": "partial_ae",
+    "ensemble_anomaly_score": 0.6344,
+    "operating_mode": "normal",
+    "mode_suppressed": false,
+    "mode_suppression_reason": "",
+    "health_status": "caution",
+    "health_score": 0.9951809546910226,
+    "color_code": "yellow",
+    "severity": "low",
+    "maintenance_urgency": "MINOR DEVIATION",
+    "maintenance_message": "Sensor deviation noted. Monitor next 24h.",
+    "sensor_snapshot": {
+      "temperature_c": 115.871,
+      "vibration_mm_s": 0.26,
+      "pressure_kpa": 143.668,
+      "motor_rpm": 2807.153,
+      "flow_rate_lpm": 43.127,
+      "power_consumption_kw": 46.929,
+      "coolant_temp_c": 106.856,
+      "acoustic_level_db": 75.076,
+      "oil_viscosity_cst": 55.081,
+      "humidity_pct": 37.624,
+      "ambient_temp_c": 22.571,
+      "operating_mode": "normal"
+    },
+    "label": "Robotic Welding Arm — Sensor Fault",
+    "description": "Likely isolated sensor fault.",
+    "ground_truth": {
+      "is_anomaly": true,
+      "anomaly_type": "sensor_malfunction",
+      "rul_cycles": 103.68,
+      "rul_days": 6.9,
+      "health_status": "warning"
+    },
+    "pipeline_status": "success",
+    "validation": {
+      "gt_is_anomaly": true,
+      "pred_is_anomaly": true,
+      "anomaly_correct": true,
+      "gt_rul_cycles": 103.68,
+      "pred_rul_cycles": 103.68,
+      "rul_error": 0.0,
+      "gt_anomaly_type": "sensor_malfunction",
+      "pred_anomaly_type": "sensor_malfunction",
+      "type_correct": true
+    },
+    "diagnosis": "sensor_malfunction",
+    "confidence_score": "high",
+    "remaining_useful_life_days": 6.91,
+    "model_outputs": {
+      "lstm_ae": {
+        "anomaly_flag": true,
+        "confidence": 0.8662835682732721,
+        "reconstruction_error": 0.0048190453089773655,
+        "threshold": 0.002582156714051962,
+        "top_features": [
+          "pressure_kpa",
+          "humidity_pct",
+          "ambient_temp_c"
+        ]
+      },
+      "isolation_forest": {
+        "anomaly_flag": false,
+        "score": 0.21371748223263604,
+        "top_features": [
+          "pressure_kpa",
+          "mode_enc",
+          "motor_rpm"
+        ]
+      },
+      "rul": {
+        "cycles": 103.68,
+        "days": 6.91,
+        "bracket": "healthy"
+      }
+    }
+  }
+]
