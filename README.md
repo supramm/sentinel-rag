@@ -254,4 +254,4 @@ streamlit run rag_app.py
 
 ## ⚠️ Disclaimer
 
-This project was developed for research, educational, and demonstration purposes. Generated recommendations should be reviewed by qualified maintenance engineers before operational deployment in industrial environments.<img width="1920" height="1080" alt="Screenshot 2026-06-19 185202" src="https://github.com/user-attachments/assets/489536e8-fb80-46e4-b6ab-06c463d3c232" />
+This project was developed for research, educational, and demonstration purposes. Generated recommendations should be reviewed by qualified maintenance engineers before operational deployment in industrial environments.
